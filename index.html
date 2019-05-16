@@ -155,10 +155,26 @@ sizeHomeElement();
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
               <div class="row d-flex justify-content-center mt-5">
                 <div class="col-md-6">
-                  <form action="#" class="subscribe-form">
+                  <script type="text/javascript">
+
+                  function submitNews(){
+                  url = "https://docs.google.com/forms/d/e/1FAIpQLSdJrt-E7YTTcA0i1iIuItkp7NMjuDjU1tiaaCkatvmztKh8xA/viewform?usp=pp_url&entry.2055715363="
+                  text = document.getElementById('nEmailAddress').value
+                  submit  = '&submit=Submit'
+                  //file_get_contents(url+text+submit);
+                  fetch(url+text+submit).then(data=>{console.log(data)})
+                }
+                const inputNode = document.getElementById('nEmailAddress');
+inputNode.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      submitNews();
+    }
+});
+                  </script>
+                  <form action="" class="subscribe-form">
                     <div class="form-group">
-                      <span class="icon icon-paper-plane"></span>
-                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <span class="icon icon-paper-plane" onclick="submitNews()"></span>
+                      <input id='nEmailAddress' type="text" class="form-control" placeholder="Enter email address">
                     </div>
                   </form>
                 </div>

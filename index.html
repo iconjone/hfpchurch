@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+
+
   </head>
   <body>
 
@@ -49,47 +51,29 @@
 	  </nav>
     <!-- END nav -->
 
-    <section id="home" class="video-hero js-fullheight" style="height: 700px; background-image: url(images/bg_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
-			<div class="overlay js-fullheight"></div>
-			<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=5m--ptwd_iI',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:false, startAt:0, opacity:1, quality:'default'}"></a>
+    <section id="home" class="video-hero js-fullheight" style="height: 842px; background-image: url(images/bg_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+<script type="text/javascript">
+function sizeHomeElement(){
+console.log("resize")
+  h = window.innerHeight;
+
+  h = (h + 80) + "px";
+    console.log(h)
+    //  document.querySelector('#home').style.height = "842px";
+}
+sizeHomeElement();
+    window.addEventListener('resize', sizeHomeElement);
+</script>
+    	<div class="overlay js-fullheight"></div>
+
 			<div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-10 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
             <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Needing <strong>Jesus Christ</strong> Together</h1>
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#" class="btn btn-primary btn-outline-white px-4 py-3">Save your spirit</a></p>
+              <!-- <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#" class="btn btn-primary btn-outline-white px-4 py-3">Save your spirit</a></p> -->
           </div>
         </div>
       </div>
-		</section>
-
-		<section class="ftco-bible-study">
-			<div class="container-wrap">
-				<div class="col-md-12 wrap">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12 d-md-flex">
-								<div class="one-forth ftco-animate">
-									<h3>Bible Study</h3>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
-								</div>
-								<div class="one-half d-md-flex align-items-md-center ftco-animate">
-									<div class="countdown-wrap">
-										<p class="countdown d-flex">
-											<span id="days"></span>
-											<span id="hours"></span>
-											<span id="minutes"></span>
-											<span id="seconds"></span>
-										</p>
-									</div>
-									<div class="button">
-										<p><a href="#" class="btn btn-primary p-3">Events Details</a></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</section>
 
 		<section class="ftco-section-2">
@@ -554,6 +538,11 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+      <script src="js/custom_background.js"></script>
+  <script type="text/javascript">
+  //Custom js that uses slector to add backgrounf
+start_background("#home");
+  </script>
 
   </body>
 </html>

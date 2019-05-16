@@ -7241,6 +7241,12 @@ a.text-dark:hover, a.text-dark:focus {
 .invisible {
   visibility: hidden !important; }
 
+/* Newsletter*/
+span.icon.icon-paper-plane.newsletterHover:hover{
+color: rgba(255, 255, 255, 0.1);
+}
+
+
 @media print {
   *,
   *::before,

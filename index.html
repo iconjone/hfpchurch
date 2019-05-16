@@ -145,7 +145,7 @@ sizeHomeElement();
         </div>
       </div>
     </section>
-
+    <a id = "news">
     <section class="ftco-section-parallax">
       <div class="parallax-img d-flex align-items-center">
         <div class="container">
@@ -172,10 +172,11 @@ inputNode.addEventListener("keyup", function(event) {
     }
 });
                   </script>
-                  <form action="" class="subscribe-form">
+
+                  <form action="javascript:submitNews();" class="subscribe-form">
                     <div class="form-group">
-                      <span class="icon icon-paper-plane" onclick="submitNews()"></span>
-                      <input id='nEmailAddress' type="text" class="form-control" placeholder="Enter email address">
+                      <span class="icon icon-paper-plane newsletterHover" onclick="submitNews()"></span>
+                      <input id='nEmailAddress' type="email" class="form-control" placeholder="Enter email address">
                     </div>
                   </form>
                 </div>

@@ -3463,7 +3463,10 @@ input[type="button"].btn-block {
     .navbar-expand-lg .navbar-toggler {
       display: none; } } */
 
-
+ul.navbar-nav.ml-auto{
+  float: right;
+text-align: right;
+}
 
 
 @media (max-width: 1199.98px) {

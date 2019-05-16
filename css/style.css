@@ -3430,7 +3430,8 @@ input[type="button"].btn-block {
     padding-right: 0;
     padding-left: 0; } }
 
-@media (max-width: 992px) {
+/*Look for this vvv I changed it ot max to make it always show the thing */
+/*@media (max-width: 992px) {
   .navbar-expand-lg {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3460,7 +3461,10 @@ input[type="button"].btn-block {
       -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .navbar-expand-lg .navbar-toggler {
-      display: none; } }
+      display: none; } } */
+
+
+
 
 @media (max-width: 1199.98px) {
   .navbar-expand-xl > .container,

@@ -151,27 +151,32 @@ sizeHomeElement();
         <div class="container">
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <h2 id='newsText'>Subcribe to our Newsletter</h2>
+              <p id ="pNews">Join our newsletter to keep up to date!</p>
               <div class="row d-flex justify-content-center mt-5">
                 <div class="col-md-6">
                   <script type="text/javascript">
 
                   function submitNews(){
-                    console.log("hey bud")
                   url = "https://docs.google.com/forms/d/e/1FAIpQLSdJrt-E7YTTcA0i1iIuItkp7NMjuDjU1tiaaCkatvmztKh8xA/formResponse?&entry.2055715363="
                   text = document.getElementById('nEmailAddress').value
                   submit  = '&submit=Submit'
                   //file_get_contents(url+text+submit);
                   fetch(url+text+submit, {'mode': 'no-cors'}).then(data=>{console.log(data)})
+                  newsFormElement = document.getElementById('newsForm')
+                  newsFormElement.innerHTML = " "
+                  newsFormElement = document.getElementById('pNews')
+                  newsFormElement.innerHTML = " "
+                  newsTextElement = document.getElementById('newsText')
+                  newsTextElement.innerHTML="Congrats! You've registered!"
                 }
-              
+
                   </script>
 
-                  <form action="javascript:submitNews();" class="subscribe-form">
+                  <form id="newsForm" action="javascript:submitNews();" class="subscribe-form">
                     <div class="form-group">
-                      <span class="icon icon-paper-plane newsletterHover" onclick="submitNews()"></span>
-                      <input id='nEmailAddress' type="email" class="form-control" placeholder="Enter email address">
+                      <span class="icon icon-paper-plane newsletterHover" onclick='document.getElementById("newsForm").submit();'></span>
+                      <input id='nEmailAddress' type="email" class="form-control" placeholder="Enter email address" required>
                     </div>
                   </form>
                 </div>

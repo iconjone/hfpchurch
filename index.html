@@ -156,8 +156,18 @@ sizeHomeElement();
               <div class="row d-flex justify-content-center mt-5">
                 <div class="col-md-6">
                   <script type="text/javascript">
-
+                  function ValidateEmail(mail)
+                  {
+                   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+                    {
+                      return (true)
+                    }
+                    newsFormElement = document.getElementById('pNews')
+                    newsFormElement.innerHTML = "Make sure it's a valid email!"
+                    return (false)
+                  }
                   function submitNews(){
+                    if(ValidateEmail(document.getElementById('nEmailAddress').value)){
                   url = "https://docs.google.com/forms/d/e/1FAIpQLSdJrt-E7YTTcA0i1iIuItkp7NMjuDjU1tiaaCkatvmztKh8xA/formResponse?&entry.2055715363="
                   text = document.getElementById('nEmailAddress').value
                   submit  = '&submit=Submit'
@@ -170,13 +180,14 @@ sizeHomeElement();
                   newsTextElement = document.getElementById('newsText')
                   newsTextElement.innerHTML="Congrats! You've registered!"
                 }
+                }
 
                   </script>
 
                   <form id="newsForm" action="javascript:submitNews();" class="subscribe-form">
                     <div class="form-group">
                       <span class="icon icon-paper-plane newsletterHover" onclick='document.getElementById("newsForm").submit();'></span>
-                      <input id='nEmailAddress' type="email" class="form-control" placeholder="Enter email address" required>
+                      <input id='nEmailAddress' type="text" class="form-control" placeholder="Enter email address" required>
                     </div>
                   </form>
                 </div>

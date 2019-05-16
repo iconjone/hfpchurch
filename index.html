@@ -165,12 +165,7 @@ sizeHomeElement();
                   //file_get_contents(url+text+submit);
                   fetch(url+text+submit, {'mode': 'no-cors'}).then(data=>{console.log(data)})
                 }
-                const inputNode = document.getElementById('nEmailAddress');
-inputNode.addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-      submitNews();
-    }
-});
+              
                   </script>
 
                   <form action="javascript:submitNews();" class="subscribe-form">

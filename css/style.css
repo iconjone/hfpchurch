@@ -7733,6 +7733,10 @@ h1, h2, h3, h4, h5,
     -webkit-animation: pulse 2s infinite;
     animation: pulse 2s infinite;
   }
+  .icon.d-flex.justify-content-center.align-items-center{
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+  }
   input#nEmailAddress{
     -webkit-animation: pulseBlue 2s infinite;
     animation: pulseBlue 2s infinite;

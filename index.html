@@ -44,10 +44,10 @@ function resetNavItem(element){
 navArr = document.getElementsByClassName('nav-item')
 navArr = Object.entries(navArr)
 navArr.forEach(function(elem){
-  elem[1].classList = ['nav-item']
+  elem[1].className = 'nav-item'
 })
-classNavActive = 'nav-item'
-element.classList = classNavActive;
+classNavActive = 'nav-item active'
+element.parentElement.className = classNavActive;
 }
 var str = 'hell\"o'
 </script>
@@ -56,8 +56,9 @@ var str = 'hell\"o'
           <li class="nav-item active"><a href="index.html" class="nav-link" onclick='javascript:resetNavItem(this);'>Home</a></li>
           <li class="nav-item"><a href="#mission" class="nav-link" onclick='javascript:resetNavItem(this);'>Our Mission</a></li>
           <li class="nav-item"><a href="#connected" class="nav-link" onclick='javascript:resetNavItem(this);'>Get Connected</a></li>
-          <li class="nav-item"><a href="/" class="nav-link" onclick='javascript:resetNavItem(this);'>Sermons</a></li>
-          <li class="nav-item"><a href="/" class="nav-link" onclick='javascript:resetNavItem(this);'>Blog</a></li>
+          <li class="nav-item"><a href="#news" class="nav-link" onclick='javascript:resetNavItem(this);'>Newsletter</a></li>
+          <li class="nav-item"><a href="#sermons" class="nav-link" onclick='javascript:resetNavItem(this);'>Sermons</a></li>
+          <li class="nav-item"><a href="#testimony" class="nav-link" onclick='javascript:resetNavItem(this);'>Testimonies</a></li>
           <li class="nav-item"><a href="/" class="nav-link" onclick='javascript:resetNavItem(this);'>Contact</a></li>
         </ul>
       </div>
@@ -222,7 +223,7 @@ var str = 'hell\"o'
       </div>
     </section>
 
-    <section class="ftco-section">
+    <section id="sermons" class="ftco-section">
       <div class="container">
         <div class="row no-gutters justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">
@@ -234,7 +235,7 @@ var str = 'hell\"o'
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="sermons">
-              <a href="https://vimeo.com/45830194" class="img popup-vimeo mb-3 d-flex justify-content-center align-items-center" style="background-image: url(images/sermons-1.jpg);">
+              <a href="https://www.youtube.com/watch?v=wte-0aRjias" class="img popup-youtube mb-3 d-flex justify-content-center align-items-center" style="background-image: url(images/sermons-1.jpg);">
                 <div class="icon d-flex justify-content-center align-items-center">
                   <span class="icon-play"></span>
                 </div>
@@ -280,7 +281,7 @@ var str = 'hell\"o'
       </div>
     </section>
 
-    <section class="ftco-section testimony-section bg-light">
+    <section id='testimony' class="ftco-section testimony-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
           <div class="col-md-7 text-center heading-section ftco-animate">

@@ -177,7 +177,7 @@
 
 
 	var counter = function() {
-
+console.log("hey")
 		$('#section-counter').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {

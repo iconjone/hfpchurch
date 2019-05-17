@@ -182,30 +182,29 @@ var str = 'hell\"o'
       sermonsArr = Object.entries(document.getElementsByClassName('sermons'))
       console.log(sermonsArr)
       ite = 3;
-      first = true
       sermonsArr.forEach(function(serEle){
         console.log(serEle)
-        if(first){
-          serEle[1].children[1].href = entryArrays[ite].content['$t'];
-          serEle[1].children[1].style['background-image'] = 'url(https://img.youtube.com/vi/' + entryArrays[ite].content['$t'].substring(32,entryArrays[ite].content['$t'].length) + '/maxresdefault.jpg)'
+        if(serEle[1].children[2] == undefined){
+          serEle[1].children[0].href = entryArrays[ite].content['$t'];
+          serEle[1].children[0].style['background-image'] = 'url(https://img.youtube.com/vi/' + entryArrays[ite].content['$t'].substring(32,entryArrays[ite].content['$t'].length) + '/maxresdefault.jpg)'
           ite++;
           console.log(serEle[1].children[2])
-          serEle[1].children[2].children[0].innerText =  entryArrays[ite].content['$t']
+          serEle[1].children[1].children[0].innerText =  entryArrays[ite].content['$t']
           ite++;
-          serEle[1].children[2].children[1].innerText =  entryArrays[ite].content['$t']
+          serEle[1].children[1].children[1].innerText =  entryArrays[ite].content['$t']
             ite++
-            first = false
+
           }
           else{
-            serEle[1].children[0].href = entryArrays[ite].content['$t'];
-            serEle[1].children[0].style['background-image'] = 'url(https://img.youtube.com/vi/' + entryArrays[ite].content['$t'].substring(32,entryArrays[ite].content['$t'].length) + '/maxresdefault.jpg)'
+            serEle[1].children[1].href = entryArrays[ite].content['$t'];
+            serEle[1].children[1].style['background-image'] = 'url(https://img.youtube.com/vi/' + entryArrays[ite].content['$t'].substring(32,entryArrays[ite].content['$t'].length) + '/maxresdefault.jpg)'
             ite++;
             console.log(serEle[1].children[2])
-            serEle[1].children[1].children[0].innerText =  entryArrays[ite].content['$t']
+            serEle[1].children[2].children[0].innerText =  entryArrays[ite].content['$t']
             ite++;
-            serEle[1].children[1].children[1].innerText =  entryArrays[ite].content['$t']
+            serEle[1].children[2].children[1].innerText =  entryArrays[ite].content['$t']
               ite++
-              first = false
+
           }
 
 

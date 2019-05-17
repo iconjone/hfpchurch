@@ -225,9 +225,12 @@ var str = 'hell\"o'
     <script type="text/javascript">
     url="https://spreadsheets.google.com/feeds/cells/1s45Zu2P3nHU3FJggO_Tq0pSLdDQGiDmAkbb9XsPyRTw/default/public/basic?alt=json&min-row=1&min-col=1&max-col=2";
 														fetch(url)
-														.then(function(data){
-console.log(data)
-                                                        })
+                            .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(myJson);
+    });
                                                         </script>
 
     <section id="sermons" class="ftco-section">
@@ -242,7 +245,7 @@ console.log(data)
         <div class="row">
           <div class="col-md-4 ftco-animate">
             <div class="sermons">
-              <a href="https://www.youtube.com/watch?v=wte-0aRjias" class="img popup-youtube mb-3 d-flex justify-content-center align-items-center" style="background-image: url(images/sermons-1.jpg);">
+              <a href="https://www.youtube.com/watch?v=wte-0aRjias" class="img popup-youtube mb-3 d-flex justify-content-center align-items-center" style="background-image: url(https://img.youtube.com/vi/wte-0aRjias/0.jpg);">
                 <div class="icon d-flex justify-content-center align-items-center">
                   <span class="icon-play"></span>
                 </div>

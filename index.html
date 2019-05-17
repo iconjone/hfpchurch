@@ -168,60 +168,7 @@ var str = 'hell\"o'
       </div>
     </div>
   </section>
-  <a id="news">
-    <section class="ftco-section-parallax">
-      <div class="parallax-img d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-              <h2 id='newsText'>Subcribe to our Newsletter</h2>
-              <p id="pNews">Join our newsletter to keep up to date!</p>
-              <div class="row d-flex justify-content-center mt-5">
-                <div class="col-md-6">
-                  <script type="text/javascript">
-                    function ValidateEmail(mail) {
-                      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-                        return (true)
-                      }
-                      newsFormElement = document.getElementById('pNews')
-                      newsFormElement.innerHTML = "Make sure it's a valid email!"
-                      return (false)
-                    }
 
-                    function submitNews() {
-                      if (ValidateEmail(document.getElementById('nEmailAddress').value)) {
-                        url = "https://docs.google.com/forms/d/e/1FAIpQLSdJrt-E7YTTcA0i1iIuItkp7NMjuDjU1tiaaCkatvmztKh8xA/formResponse?&entry.2055715363="
-                        text = document.getElementById('nEmailAddress').value
-                        submit = '&submit=Submit'
-                        //file_get_contents(url+text+submit);
-                        fetch(url + text + submit, {
-                          'mode': 'no-cors'
-                        }).then(data => {
-                          console.log(data)
-                        })
-                        newsFormElement = document.getElementById('newsForm')
-                        newsFormElement.innerHTML = " "
-                        newsFormElement = document.getElementById('pNews')
-                        newsFormElement.innerHTML = " "
-                        newsTextElement = document.getElementById('newsText')
-                        newsTextElement.innerHTML = "Congrats! You've registered!"
-                      }
-                    }
-                  </script>
-
-                  <form id="newsForm" action="javascript:submitNews();" class="subscribe-form">
-                    <div class="form-group">
-                      <span class="icon icon-paper-plane newsletterHover" onclick='document.getElementById("newsForm").submit();'></span>
-                      <input id='nEmailAddress' type="text" class="form-control" placeholder="Enter email address" required>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <script type="text/javascript">
 
     url="https://spreadsheets.google.com/feeds/cells/1s45Zu2P3nHU3FJggO_Tq0pSLdDQGiDmAkbb9XsPyRTw/default/public/basic?alt=json&min-row=1&min-col=1&max-col=3";
@@ -494,7 +441,60 @@ var str = 'hell\"o'
       </div>
     </section>
 
-    
+    <a id="news">
+      <section class="ftco-section-parallax">
+        <div class="parallax-img d-flex align-items-center">
+          <div class="container">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                <h2 id='newsText'>Subcribe to our Newsletter</h2>
+                <p id="pNews">Join our newsletter to keep up to date!</p>
+                <div class="row d-flex justify-content-center mt-5">
+                  <div class="col-md-6">
+                    <script type="text/javascript">
+                      function ValidateEmail(mail) {
+                        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+                          return (true)
+                        }
+                        newsFormElement = document.getElementById('pNews')
+                        newsFormElement.innerHTML = "Make sure it's a valid email!"
+                        return (false)
+                      }
+
+                      function submitNews() {
+                        if (ValidateEmail(document.getElementById('nEmailAddress').value)) {
+                          url = "https://docs.google.com/forms/d/e/1FAIpQLSdJrt-E7YTTcA0i1iIuItkp7NMjuDjU1tiaaCkatvmztKh8xA/formResponse?&entry.2055715363="
+                          text = document.getElementById('nEmailAddress').value
+                          submit = '&submit=Submit'
+                          //file_get_contents(url+text+submit);
+                          fetch(url + text + submit, {
+                            'mode': 'no-cors'
+                          }).then(data => {
+                            console.log(data)
+                          })
+                          newsFormElement = document.getElementById('newsForm')
+                          newsFormElement.innerHTML = " "
+                          newsFormElement = document.getElementById('pNews')
+                          newsFormElement.innerHTML = " "
+                          newsTextElement = document.getElementById('newsText')
+                          newsTextElement.innerHTML = "Congrats! You've registered!"
+                        }
+                      }
+                    </script>
+
+                    <form id="newsForm" action="javascript:submitNews();" class="subscribe-form">
+                      <div class="form-group">
+                        <span class="icon icon-paper-plane newsletterHover" onclick='document.getElementById("newsForm").submit();'></span>
+                        <input id='nEmailAddress' type="text" class="form-control" placeholder="Enter email address" required>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">

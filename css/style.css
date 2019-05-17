@@ -8348,6 +8348,24 @@ textarea.form-control {
         -webkit-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0);
         box-shadow: 0 0 0 0 rgba(9, 0, 137, 0); } }
 
+        @keyframes pulseWhite {
+          0% {
+            text-shadow: 0px 0px 0px rgba(255, 0, 0, .4); }
+          70% {
+            text-shadow: 0 0 250px rgba(255, 0, 0, 1); }
+          100% {
+            text-shadow: 0 0 0px rgba(255, 0, 0, 0); } }
+        @-webkit-keyframes pulseWhite {
+              0% {
+                text-shadow: 0 0  0 rgba(255, 0, 0, 0.4); }
+              70% {
+                text-shadow: 0 0  50px rgba(255, 0, 0, 1); }
+              100% {
+                text-shadow: 0 0  0 rgba(255, 0, 0, 0); } }
+
+.downArrow{
+  -webkit-animation: pulseWhite 2s infinite; animation: pulseWhite 2s infinite;
+}
 .heading-section .subheading {
   font-size: 13px;
   text-transform: uppercase;

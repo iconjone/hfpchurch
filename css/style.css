@@ -7645,6 +7645,9 @@ h1, h2, h3, h4, h5,
       left: 0; }
     .owl-carousel .owl-nav .owl-next {
       right: 0; }
+      button.owl-dot.active{
+        background: #494343 !important;
+      }
   .owl-carousel .owl-dots {
     text-align: center; }
     .owl-carousel .owl-dots .owl-dot {
@@ -7729,6 +7732,10 @@ h1, h2, h3, h4, h5,
   .icon.d-flex.justify-content-center.mb-3{
     -webkit-animation: pulse 2s infinite;
     animation: pulse 2s infinite;
+  }
+  input#nEmailAddress{
+    -webkit-animation: pulseBlue 2s infinite;
+    animation: pulseBlue 2s infinite;
   }
 
 .ftco-section-2 .section-2-blocks-wrapper .button {
@@ -8262,6 +8269,28 @@ textarea.form-control {
     -moz-box-shadow: 0 0 0 0 rgba(255, 86, 86, 0);
     -webkit-box-shadow: 0 0 0 0 rgba(255, 86, 86, 0);
     box-shadow: 0 0 0 0 rgba(255, 86, 86, 0); } }
+
+     @-webkit-keyframes pulseBlue {
+      0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0.4); }
+      70% {
+        -webkit-box-shadow: 0 0 0 30px rgba(9, 0, 137, 0); }
+      100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0); } }
+
+     @keyframes pulseBlue {
+      0% {
+        -moz-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0.4);
+        -webkit-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0.4);
+        box-shadow: 0 0 0 0 rgba(9, 0, 137, 0.4);}
+      70% {
+        -moz-box-shadow: 0 0 0 30px rgba(9, 0, 137, 0);
+        -webkit-box-shadow: 0 0 0 30px rgba(9, 0, 137, 0);
+        box-shadow: 0 0 0 30px rgba(9, 0, 137, 0);}
+      100% {
+        -moz-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0);
+        -webkit-box-shadow: 0 0 0 0 rgba(9, 0, 137, 0);
+        box-shadow: 0 0 0 0 rgba(9, 0, 137, 0); } }
 
 .heading-section .subheading {
   font-size: 13px;

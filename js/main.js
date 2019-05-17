@@ -70,6 +70,9 @@
 			margin: 30,
 			stagePadding: 0,
 			nav: true,
+      autoplay: true,
+      stopOnHover: true,
+      rewindNav: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
 			responsive:{
 				0:{
@@ -188,7 +191,7 @@
 					  {
 					    number: num,
 					    numberStep: comma_separator_number_step
-					  }, 7000
+					  }, 2500
 					);
 				});
 

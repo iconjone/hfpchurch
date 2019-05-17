@@ -59,7 +59,6 @@ var str = 'hell\"o'
           <li class="nav-item"><a href="#news" class="nav-link" onclick='javascript:resetNavItem(this);'>Newsletter</a></li>
           <li class="nav-item"><a href="#sermonsAn" class="nav-link" onclick='javascript:resetNavItem(this);'>Sermons</a></li>
           <li class="nav-item"><a href="#testimony" class="nav-link" onclick='javascript:resetNavItem(this);'>Testimonies</a></li>
-          <li class="nav-item"><a href="#events" class="nav-link" onclick='javascript:resetNavItem(this);'>Events</a></li>
           <li class="nav-item"><a href="/" class="nav-link" onclick='javascript:resetNavItem(this);'>Contact</a></li>
         </ul>
       </div>
@@ -398,90 +397,46 @@ var str = 'hell\"o'
       </div>
     </section>
 
-    <section id='events' class="ftco-section-2">
+    <section class="ftco-section-2">
       <div class="container-fluid">
-        <div class="row justify-content-center mt-5 pb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-            <h2>Events</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
-          </div>
-        </div>
         <div class="row no-gutters d-flex">
-              <div class="col-xs-12 col-sm-12 " style="text-align:center">
-                  <ul id="timelineAppend" class="timeline timeline-centered">
-                      <li class="timeline-item">
-                          <div class="timeline-info">
-                              <span>March 12, 2016</span>
-                              <p>Time</p>
-                          </div>
-                          <div class="timeline-marker"></div>
-                          <div class="timeline-content">
-                              <h3 class="timeline-title">Event Title</h3>
-                              <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                                  eu pede mollis pretium. Pellentesque ut neque.</p>
-                          </div>
-                      </li>
-                      <li class="timeline-item">
-                          <div class="timeline-info">
-                              <span>March 23, 2016</span>
-                              <p>Time</p>
-                          </div>
-                          <div class="timeline-marker"></div>
-                          <div class="timeline-content">
-                              <h3 class="timeline-title">Event Title</h3>
-                              <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
-                                  eu pede mollis pretium. Pellentesque ut neque. </p>
-                          </div>
-                      </li>
-
-                  </ul>
-                  <script type="text/javascript">
-                  url="https://spreadsheets.google.com/feeds/cells/1HCHkSZ3wquAG5joULORvHRLPmauRiMogqycWYnFiVls/default/public/basic?alt=json&min-row=1&min-col=1&max-col=4";
-              														fetch(url)
-                                          .then(function(response) {
-                    return response.json();
-                  })
-                  .then(function(myJson) {
-                    console.log(myJson);
-                    entryArrays = myJson.feed.entry;
-                    ite = 0;
-                    timeline = document.getElementById('timelineAppend')
-                    entryArrays.forEach(function(entry){
-                        if(ite%4 == 0 && ite>=4){
-                        li = document.createElement("li")
-                        li.className = 'timeline-item'
-                        divInfo = document.createElement('div')
-                        divInfo.className = 'timeline-info'
-                        spanDate = document.createElement("span")
-                        spanDate.innerHTML = entry.content['$t'];
-                        pTime = document.createElement('p')
-                        pTime.innerHTML = entryArrays[ite+1].content['$t'];
-                        divInfo.appendChild(spanDate)
-                        divInfo.appendChild(pTime)
-                        li.appendChild(divInfo)
-                        divTimeMarker = document.createElement('div')
-                        divTimeMarker.className = 'timeline-marker'
-                        li.appendChild(divTimeMarker)
-                        divTimeContent = document.createElement('div')
-                        divTimeContent.className = 'timeline-content'
-                        h3Title = document.createElement('h3')
-                        h3Title.className = 'timeline-title'
-                        h3Title.innerHTML = entryArrays[ite+2].content['$t'];
-                        pTimeDes = document.createElement('p')
-                        pTimeDes.innerHTML = entryArrays[ite+3].content['$t'];
-                        divTimeContent.appendChild(h3Title)
-                        divTimeContent.appendChild(pTimeDes)
-                        li.appendChild(divTimeContent)
-                        timeline.appendChild(li)
-
-                        }
-                        ite++
-
-                    })
-
-                  })
-                  </script>
+          <div class="col-md-6 img d-flex justify-content-end align-items-center" style="background-image: url(images/event.jpg);">
+            <div class="col-md-7 heading-section text-sm-center text-md-right heading-section-white ftco-animate mr-md-5 mt-md-5">
+              <h2>Our latest events</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <p><a href="#" class="btn btn-primary py-3 px-4">View Events</a></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="event-wrap">
+              <div class="event-entry d-flex ftco-animate">
+                <div class="meta mr-4">
+                  <p>
+                    <span>07</span>
+                    <span>Aug 2018</span>
+                  </p>
+                </div>
+                <div class="text">
+                  <h3 class="mb-2"><a href="events.html">Saturday's Bible Reading</a></h3>
+                  <p class="mb-4"><span>9:00am at 456 NC USA</span></p>
+                  <a href="events.html" class="img" style="background-image: url(images/event-1.jpg);"></a>
+                </div>
               </div>
+              <div class="event-entry d-flex ftco-animate">
+                <div class="meta mr-4">
+                  <p>
+                    <span>07</span>
+                    <span>Aug 2018</span>
+                  </p>
+                </div>
+                <div class="text">
+                  <h3 class="mb-2"><a href="events.html">Wednesday Gospel Singing</a></h3>
+                  <p class="mb-4"><span>9:00am at 456 NC USA</span></p>
+                  <a href="events.html" class="img" style="background-image: url(images/event-2.jpg);"></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

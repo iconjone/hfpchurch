@@ -243,6 +243,7 @@ console.log("hey")
 	var OnePageNav = function() {
 		$(".smoothscroll[href^='#'], #ftco-nav section ul li a[href^='#']").on('click', function(e) {
 		 	e.preventDefault();
+       console.log("this ran")
 
 		 	var hash = this.hash,
 		 			navToggler = $('.navbar-toggler');
@@ -252,8 +253,9 @@ console.log("hey")
 		    window.location.hash = hash;
 		  });
 
+    var navCont = document.getElementById('ftco-nav')
 
-		  if ( navToggler.is(':visible') ) {
+		  if ( navToggler.is(':visible') && navCont.classList.contains("show") ) {
 		  	navToggler.click();
 		  }
 		});

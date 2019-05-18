@@ -35,37 +35,37 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><i class="flaticon-cross"></i> <span>HPF</span> <span>Church</span></a>
+      <a class="navbar-brand smoothscroll" href="#home"><i class="flaticon-cross"></i> <span>HPF</span> <span>Church</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
-<script type="text/javascript">
-function resetNavItem(element){
-navArr = document.getElementsByClassName('nav-item')
-navArr = Object.entries(navArr)
-navArr.forEach(function(elem){
-  elem[1].className = 'nav-item'
-})
-classNavActive = 'nav-item active'
-element.parentElement.className = classNavActive;
-}
-var str = 'hell\"o'
-</script>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link" onclick='javascript:resetNavItem(this);'>Home</a></li>
-          <li class="nav-item"><a href="#mission" class="nav-link" onclick='javascript:resetNavItem(this);'>Our Mission</a></li>
-          <li class="nav-item"><a href="#connected" class="nav-link" onclick='javascript:resetNavItem(this);'>Get Connected</a></li>
-          <li class="nav-item"><a href="#sermonsAn" class="nav-link" onclick='javascript:resetNavItem(this);'>Sermons</a></li>
-          <li class="nav-item"><a href="#testimony" class="nav-link" onclick='javascript:resetNavItem(this);'>Testimonies</a></li>
-          <li class="nav-item"><a href="#section-counter" class="nav-link" onclick='javascript:resetNavItem(this);'>Achievements</a></li>
-          <li class="nav-item"><a href="#events" class="nav-link" onclick='javascript:resetNavItem(this);'>Events</a></li>
-          <li class="nav-item"><a href="#news" class="nav-link" onclick='javascript:resetNavItem(this);'>Newsletter</a></li>
-          <li class="nav-item"><a href="/" class="nav-link" onclick='javascript:resetNavItem(this);'>Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+      <script type="text/javascript">
+      function resetNavItem(element){
+      navArr = document.getElementsByClassName('nav-item')
+      navArr = Object.entries(navArr)
+      navArr.forEach(function(elem){
+        elem[1].className = 'nav-item smoothscroll'
+      })
+      classNavActive = 'nav-item smoothscroll active'
+      element.parentElement.className = classNavActive;
+      }
+      var str = 'hell\"o'
+      </script>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="#home" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Home</a></li>
+                <li class="nav-item"><a href="#mission" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Our Mission</a></li>
+                <li class="nav-item"><a href="#connected" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Get Connected</a></li>
+                <li class="nav-item"><a href="#sermonsAn" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Sermons</a></li>
+                <li class="nav-item"><a href="#testimony" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Testimonies</a></li>
+                <li class="nav-item"><a href="#section-counter" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Achievements</a></li>
+                <li class="nav-item"><a href="#events" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Events</a></li>
+                <li class="nav-item"><a href="#news" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Newsletter</a></li>
+                <li class="nav-item"><a href="/" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
   <!-- END nav -->
 
 
@@ -91,7 +91,7 @@ var str = 'hell\"o'
           <!-- <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="#" class="btn btn-primary btn-outline-white px-4 py-3">Save your spirit</a></p> -->
         </div>
         <div class="downarrowCont">
-          <a class="scroll-down" href="#mission">
+          <a class="scroll-down smoothscroll" href="#mission">
           <i class="fas fa-chevron-down downArrow" ></i></a>
         </div>
       </div>
@@ -162,7 +162,7 @@ var str = 'hell\"o'
 
         <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
           <div class="media block-6 services d-block text-center">
-            <a href="#sermonsAn">
+            <a href="#sermonsAn" class='smoothscroll'>
             <div class="d-flex justify-content-center">
               <div class="icon d-flex justify-content-center mb-3"><span class="align-self-center fas fa-broadcast-tower"></span></div>
             </div>

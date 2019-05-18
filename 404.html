@@ -34,19 +34,34 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-	          <li class="nav-item"><a href="sermons.html" class="nav-link">Sermons</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+        <script type="text/javascript">
+        function resetNavItem(element){
+        navArr = document.getElementsByClassName('nav-item')
+        navArr = Object.entries(navArr)
+        navArr.forEach(function(elem){
+          elem[1].className = 'nav-item smoothscroll'
+        })
+        classNavActive = 'nav-item smoothscroll active'
+        element.parentElement.className = classNavActive;
+        }
+        var str = 'hell\"o'
+        </script>
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active"><a href="#home" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Home</a></li>
+                  <li class="nav-item"><a href="#mission" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Our Mission</a></li>
+                  <li class="nav-item"><a href="#connected" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Get Connected</a></li>
+                  <li class="nav-item"><a href="#sermonsAn" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Sermons</a></li>
+                  <li class="nav-item"><a href="#testimony" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Testimonies</a></li>
+                  <li class="nav-item"><a href="#section-counter" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Achievements</a></li>
+                  <li class="nav-item"><a href="#events" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Events</a></li>
+                  <li class="nav-item"><a href="#news" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Newsletter</a></li>
+                  <li class="nav-item"><a href="/" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- END nav -->
     <!-- END nav -->
 
     <section id="home" class="video-hero js-fullheight" style="height: 700px; background-image: url(images/bg_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">

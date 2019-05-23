@@ -153,11 +153,16 @@
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
 					navbar.addClass('scrolled');
+          console.log("top gone")
+          $('.navlogo')[0].src = "images/logo/navlogoblack.png"
+          console.log($('.navlogo'))
 				}
 			}
 			if (st < 150) {
 				if ( navbar.hasClass('scrolled') ) {
 					navbar.removeClass('scrolled sleep');
+          console.log("top")
+          $('.navlogo')[0].src = "images/logo/navlogowhite.png"
 				}
 			}
 			if ( st > 350 ) {
@@ -298,13 +303,13 @@ console.log("hey")
 	$('.image-popup').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
-    closeBtnInside: false,
+    closeBtnInside: true,
     fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+   mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
      gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      enabled: false,
+      // navigateByImgClick: true,
+      // preload: [0,1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
       verticalFit: true

@@ -8679,7 +8679,17 @@ textarea.form-control {
     margin-bottom: 0; }
   .testimony-wrap .position {
     font-size: 13px; }
-
+.navlogo{
+  height: 50px;
+margin: 0;
+ position: absolute;
+ top: 50%;
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+}
+.navlogoText{
+      padding-left: 55px;
+}
 .image-popup {
   cursor: -webkit-zoom-in;
   cursor: -moz-zoom-in;

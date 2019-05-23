@@ -335,6 +335,13 @@ console.log("hey")
 	};
 	bgVideo();
 
+
+  $('.connectedMin').magnificPopup({
+    delegate: 'a',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+
 	// Set the date we're counting down to
 		// var countDownDate = new Date("Dec 30, 2019 15:37:25").getTime();
     //

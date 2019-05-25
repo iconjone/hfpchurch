@@ -1,4 +1,5 @@
-url = "https://spreadsheets.google.com/feeds/cells/1HCHkSZ3wquAG5joULORvHRLPmauRiMogqycWYnFiVls/default/public/basic?alt=json&min-row=1&min-col=1&max-col=4";
+var id = '1HCHkSZ3wquAG5joULORvHRLPmauRiMogqycWYnFiVls'
+var url = "https://spreadsheets.google.com/feeds/cells/" + id + "/default/public/basic?alt=json&min-row=1&min-col=1&max-col=4";
 fetch(url)
   .then(function(response) {
     return response.json();

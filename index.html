@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src='js/preload.js'></script>
 
 
 </head>
@@ -40,18 +41,6 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
-      <script type="text/javascript">
-        function resetNavItem(element) {
-          navArr = document.getElementsByClassName('nav-item')
-          navArr = Object.entries(navArr)
-          navArr.forEach(function(elem) {
-            elem[1].className = 'nav-item smoothscroll'
-          })
-          classNavActive = 'nav-item smoothscroll active'
-          element.parentElement.className = classNavActive;
-        }
-        var str = 'hell\"o'
-      </script>
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="#home" class="nav-link smoothscroll" onclick='javascript:resetNavItem(this);'>Home</a></li>
@@ -71,18 +60,6 @@
 
 
   <section id="home" class="video-hero js-fullheight" style="height: 842px; background-image: url(images/bg_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
-    <script type="text/javascript">
-      function sizeHomeElement() {
-        console.log("resize")
-        h = window.innerHeight;
-
-        h = (h + 80) + "px";
-        console.log(h)
-        //  document.querySelector('#home').style.height = "842px";
-      }
-      sizeHomeElement();
-      window.addEventListener('resize', sizeHomeElement);
-    </script>
     <div class="overlay js-fullheight"></div>
 
     <div class="container">
@@ -102,7 +79,7 @@
     <div class="container-fluid">
       <div class="section-2-blocks-wrapper d-flex row no-gutters">
         <div class="img col-md-6 ftco-animate" style="background-image: url('images/about.jpg');">
-          <a href="https://vimeo.com/45830194" class="button popup-vimeo"><span class="ion-ios-play"></span></a>
+          <a href="https://www.youtube.com/watch?v=YkCzvuaeaOA" class="button popup-youtube"><span class="ion-ios-play"></span></a>
         </div>
         <div class="text col-md-6 ftco-animate">
           <div class="text-inner align-self-start">
@@ -195,50 +172,7 @@
   <div id="ya-popup" class="white-popup mfp-with-anim mfp-hide">
     You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed.
   </div>
-
-
-  <script type="text/javascript">
-    url = "https://spreadsheets.google.com/feeds/cells/1s45Zu2P3nHU3FJggO_Tq0pSLdDQGiDmAkbb9XsPyRTw/default/public/basic?alt=json&min-row=1&min-col=1&max-col=3";
-    fetch(url)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-        entryArrays = myJson.feed.entry;
-        sermonsArr = Object.entries(document.getElementsByClassName('sermons'))
-        console.log(sermonsArr)
-        ite = 3;
-        sermonsArr.forEach(function(serEle) {
-          console.log(serEle)
-          if (serEle[1].children[2] == undefined) {
-            serEle[1].children[0].href = entryArrays[ite].content['$t'];
-            serEle[1].children[0].style['background-image'] = 'url(https://img.youtube.com/vi/' + entryArrays[ite].content['$t'].substring(32, entryArrays[ite].content['$t'].length) + '/maxresdefault.jpg)'
-            ite++;
-            console.log(serEle[1].children[2])
-            serEle[1].children[1].children[0].innerText = entryArrays[ite].content['$t']
-            ite++;
-            serEle[1].children[1].children[1].innerText = entryArrays[ite].content['$t']
-            ite++
-
-          } else {
-            serEle[1].children[1].href = entryArrays[ite].content['$t'];
-            serEle[1].children[1].style['background-image'] = 'url(https://img.youtube.com/vi/' + entryArrays[ite].content['$t'].substring(32, entryArrays[ite].content['$t'].length) + '/maxresdefault.jpg)'
-            ite++;
-            console.log(serEle[1].children[2])
-            serEle[1].children[2].children[0].innerText = entryArrays[ite].content['$t']
-            ite++;
-            serEle[1].children[2].children[1].innerText = entryArrays[ite].content['$t']
-            ite++
-
-          }
-
-
-        })
-
-      });
-  </script>
-
+  <script src="js/sermon.js"></script>
   <section id="sermonsAn" class="ftco-section bg-light">
     <div class="container">
       <div class="row no-gutters justify-content-center mb-5 pb-5">
@@ -447,52 +381,7 @@
 
 
           </ul>
-          <script type="text/javascript">
-            url = "https://spreadsheets.google.com/feeds/cells/1HCHkSZ3wquAG5joULORvHRLPmauRiMogqycWYnFiVls/default/public/basic?alt=json&min-row=1&min-col=1&max-col=4";
-            fetch(url)
-              .then(function(response) {
-                return response.json();
-              })
-              .then(function(myJson) {
-                console.log(myJson);
-                entryArrays = myJson.feed.entry;
-                ite = 0;
-                timeline = document.getElementById('timelineAppend')
-                entryArrays.forEach(function(entry) {
-                  if (ite % 4 == 0 && ite >= 4) {
-                    li = document.createElement("li")
-                    li.className = 'timeline-item'
-                    divInfo = document.createElement('div')
-                    divInfo.className = 'timeline-info'
-                    spanDate = document.createElement("span")
-                    spanDate.innerHTML = entry.content['$t'];
-                    pTime = document.createElement('p')
-                    pTime.innerHTML = entryArrays[ite + 1].content['$t'];
-                    divInfo.appendChild(spanDate)
-                    divInfo.appendChild(pTime)
-                    li.appendChild(divInfo)
-                    divTimeMarker = document.createElement('div')
-                    divTimeMarker.className = 'timeline-marker'
-                    li.appendChild(divTimeMarker)
-                    divTimeContent = document.createElement('div')
-                    divTimeContent.className = 'timeline-content'
-                    h3Title = document.createElement('h3')
-                    h3Title.className = 'timeline-title'
-                    h3Title.innerHTML = entryArrays[ite + 2].content['$t'];
-                    pTimeDes = document.createElement('p')
-                    pTimeDes.innerHTML = entryArrays[ite + 3].content['$t'];
-                    divTimeContent.appendChild(h3Title)
-                    divTimeContent.appendChild(pTimeDes)
-                    li.appendChild(divTimeContent)
-                    timeline.appendChild(li)
-
-                  }
-                  ite++
-
-                })
-
-              })
-          </script>
+          <script src="js/events.js"></script>
         </div>
       </div>
     </div>

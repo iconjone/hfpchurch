@@ -12085,6 +12085,13 @@ textarea.form-control {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.footerlogo{
+  height: 50px;
+margin: auto;
+position: absolute;
+top: 50%;
+transform: translateX(-125%);
+}
 
 .navlogoText {
   padding-left: 55px;

@@ -155,13 +155,15 @@
 
                     arrFormGroup.forEach(function(fg){
                       row.appendChild(fg)
-                      btn = document.createElement('button')
-                      btn.innerHTML = "DELETE"
-                      btn.className = "delBtn"
-                      row.appendChild(btn)
                     })
-
+                    btn = document.createElement('button')
+                    btn.innerHTML = "DELETE"
+                    btn.setAttribute('onclick', 'this.parentNode.parentNode.removeChild(this.parentNode)')
+                    btn.setAttribute('type','button')
+                    btn.className = "delBtn"
+                      row.appendChild(btn)
                     containerInputs.appendChild(row)
+
                 }
                 var id = '1HCHkSZ3wquAG5joULORvHRLPmauRiMogqycWYnFiVls'
                 var url = "https://spreadsheets.google.com/feeds/cells/" + id + "/default/public/basic?alt=json&min-row=1&min-col=1&max-col=4";
@@ -190,8 +192,9 @@
 
               </script>
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-12">
               <input type="submit" value="Save"  class="btn btn-primary py-3 px-5">
+              <input type="button" value="New Event" onclick="makeEvent('null','null','null','null')" style="float:right" class="btn btn-primary py-3 px-5">
             </div>
           </form>
 

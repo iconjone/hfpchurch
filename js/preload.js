@@ -7,6 +7,17 @@ function resetNavItem(element) {
   classNavActive = 'nav-item smoothscroll active'
   element.parentElement.className = classNavActive;
 }
+function scrollToMP(element){
+  var magnificPopup = $.magnificPopup.instance; // save instance in magnificPopup variable
+magnificPopup.close(); // Close popup that is currently opened
+  var hash = element
+  $('html, body').animate({
+    scrollTop: $(hash).offset().top
+  }, 700, 'easeInOutExpo', function() {
+    window.location.hash = hash;
+  });
+}
+
 // old function
 // <script type="text/javascript">
 // function sizeHomeElement() {

@@ -11048,7 +11048,10 @@ a.btn.btn-primary.btn-outline-primary.p-3 {
     background: #ff8f8f;
     color: white !important;
 }
+.popupImg{
+width: 450px;
 
+}
 .services .icon span {
   /*color: #ff5656;*/
 }

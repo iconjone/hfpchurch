@@ -11053,6 +11053,9 @@ a.btn.btn-primary.btn-outline-primary.p-3 {
   /*color: #ff5656;*/
 }
 
+.delBtn{
+  margin:auto;
+}
 .services .media-body h3 {
   font-size: 20px;
 }

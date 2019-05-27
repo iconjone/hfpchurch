@@ -2403,9 +2403,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg>select.form-
 .input-group-lg>.input-group-append>select.btn:not([size]):not([multiple]) {
   height: calc(2.875rem + 2px);
 }
-
+div#containerInputs{
+      cursor: move;
+}
 .form-group {
   margin-bottom: 1rem;
+      margin-top: 1rem;
 }
 
 .form-text {
@@ -11041,9 +11044,13 @@ a.btn.btn-primary.btn-outline-primary.p-3 {
   -ms-border-radius: 50%;
   border-radius: 50%;
 }
+.icon.d-flex.justify-content-center.mb-3:hover {
+    background: #ff8f8f;
+    color: white !important;
+}
 
 .services .icon span {
-  color: #ff5656;
+  /*color: #ff5656;*/
 }
 
 .services .media-body h3 {

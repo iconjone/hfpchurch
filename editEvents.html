@@ -155,6 +155,10 @@
 
                     arrFormGroup.forEach(function(fg){
                       row.appendChild(fg)
+                      btn = document.createElement('button')
+                      btn.innerHTML = "DELETE"
+                      btn.className = "delBtn"
+                      row.appendChild(btn)
                     })
 
                     containerInputs.appendChild(row)

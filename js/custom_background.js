@@ -13,21 +13,23 @@ function start_background(selector) {
   }
   sizeHomeElement();
       window.addEventListener('resize', sizeHomeElement);
-  document.querySelector(selector).style.backgroundSize = "cover";
-  document.querySelector(selector).style.backgroundRepeat = "no-repeat";
-  document.querySelector(selector).style.backgroundPosition = "center center";
-  document.querySelector(selector).style["background-attachment"] = "fixed";
+  var selectedElement = document.querySelector(selector)
+  selectedElement.style.backgroundSize = "cover";
+  selectedElement.style.backgroundRepeat = "no-repeat";
+  selectedElement.style.backgroundPosition = "center center";
+  selectedElement.style["background-attachment"] = "fixed";
 
 
   setTimeout(function() {
     //add various style on selector
 
     var transition = "all " + 500 + 'ms ' + 'ease-in';
-    document.querySelector(selector).style.WebkitTransition = transition;
-    document.querySelector(selector).style.MozTransition = transition;
-    document.querySelector(selector).style.MsTransition = transition;
-    document.querySelector(selector).style.OTransition = transition;
-    document.querySelector(selector).style.transition = transition;
+    var selectedElement = document.querySelector(selector)
+    selectedElement.style.WebkitTransition = transition;
+    selectedElement.style.MozTransition = transition;
+    selectedElement.style.MsTransition = transition;
+    selectedElement.style.OTransition = transition;
+    selectedElement.style.transition = transition;
   }, 100);
 
 

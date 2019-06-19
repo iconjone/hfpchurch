@@ -9,7 +9,7 @@ function ValidateEmail(mail) {
 
 function submitNews() {
   if (ValidateEmail(document.getElementById('nEmailAddress').value)) {
-    url = "https://docs.google.com/forms/d/e/1FAIpQLSdJrt-E7YTTcA0i1iIuItkp7NMjuDjU1tiaaCkatvmztKh8xA/formResponse?&entry.2055715363="
+    url = "https://docs.google.com/forms/d/e/1FAIpQLSel6B0itDCeRFfWV6llX1Wdv9bpbRzZj_sOmTt_7kk-ORESbw/formResponse?&entry.2055715363="
     text = document.getElementById('nEmailAddress').value
     submit = '&submit=Submit'
     //file_get_contents(url+text+submit);

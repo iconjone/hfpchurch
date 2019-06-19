@@ -132,8 +132,8 @@
                   jsonret = JSON.stringify(ret)
                   pass = document.getElementById('password').value
                   url = 'https://script.google.com/macros/s/AKfycby8q58J1CIAXp-lhWNhAkiOzTE4_v_Xy1D8YVLt4C3tUe_-7hA/exec'
-                  fetch(url + "?pass="+pass+"&json="+jsonret,{method:'GET', 'mode': 'no-cors'})
-
+                  //fetch(url + "?pass="+pass+"&json="+jsonret,{method:'GET', 'mode': 'no-cors'})
+                  window.location.href = url + "?pass="+pass+"&json="+jsonret;
 
               }
                 function makeEvent(date, time, title, description){

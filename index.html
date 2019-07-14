@@ -161,7 +161,7 @@
     </div>
   </section>
   <div id="kid-popup" class="white-popup mfp-with-anim mfp-hide">
-    <img class="popupImg" src="images/childMinistries.jpg">
+    <img class="popupImg" src="images/babyMinistries.jpg">
     HPF Kids is our ministry to from birth to 10 years old. This ministry is directed towards aiding the children in learning about God and His love for them while simultaneously creating a nurturing and fun environment. This ministry aims to raise up a generation of children that are faithful disciples of God.
       <br>
        <button class="btn btn-primary" type="button" onclick="scrollToMP('#gallery')">View Gallery</button>
@@ -258,30 +258,55 @@
       </div>
       <div class="row ftco-animate">
         <div class="container">
-      <div class="row">
-          <div class="col" style="padding-right:20px; border-right: 1px solid #ccc;">
-            <ul class="list-group list-group-flush">
-  <li class="list-group-item">Sunday: 9:30: Sunday School; adults & children</li>
-  <li class="list-group-item">10:00 am-11:15 am: Sunday Service (English)</li>
-  <li class="list-group-item">11:15 am- 12:30 am: Sunday Service (Malayalam)</li>
-  <li class="list-group-item">2:00 pm-5:00 pm: Sunday Service (Spanish)</li>
-  <li class="list-group-item">Bible Study (youth)</li>
-  <li class="list-group-item">•Ladies, Wednesday @ 9:00 pm</li>
-  <li class="list-group-item">•Men, Thursday @ 9:00 pm</li>
-  <li class="list-group-item">Fasting Prayer:</li>
-  <li class="list-group-item">Friday: 10:00 am - 12:00 pm</li>
-  <li class="list-group-item">12 hour fasting prayer: Once a month TBD</li>
-  <li class="list-group-item">Youth Gathering: One a month TBD</li>
+
+
+        <div class="row">
+<div class="col-4">
+  <div class="list-group" id="list-tab" role="tablist">
+    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Sunday Service Times</a>
+    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Youth Bible Study</a>
+    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Misc</a>
+  <!--  <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"></a> -->
+  </div>
+</div>
+<div class="col-8">
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+      <ul class="list-group list-group-flush">
+  <li class="list-group-item">9:30 am: Sunday School (Adults & Children) </li>
+  <li class="list-group-item">10:00 am: Sunday Service (English)</li>
+  <li class="list-group-item">11:15 am: Sunday Service (Malayalam)</li>
+  <li class="list-group-item"> 2:00 am: Sunday Service (English)</li>
+</ul>
+</div>
+    <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+      <ul class="list-group list-group-flush">
+  <li class="list-group-item"> Ladies: Ever Wednesday 9:00 pm  </li>
+  <li class="list-group-item">Men: Every Thursday 9:00 pm</li>
 </ul>
 
-    
-          </div>
+    </div>
+    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+      <ul class="list-group list-group-flush">
+    <li class="list-group-item"> Friday Fasting Prayer 10:00 am  </li>
+    <li class="list-group-item">Saturday Service 7:00 pm </li>
+    </ul>
 
-          <div class="col">
+    </div>
+  <!--  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>-->
+  </div>
+</div>
+</div>
+
+          <div class="row">
               <h3>Verse of the Day:</h3>
               <p id='verseAppend'></p>
               <script src="js/verse.js"></script>
           </div>
+          <div class="row">
+
+
+
       </div>
   </div>
       </div>

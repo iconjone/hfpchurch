@@ -5760,11 +5760,11 @@ ul.navbar-nav.ml-auto {
 }
 
 .list-group-item.active {
-  z-index: 2;
-  color: #fff;
-  background-color: #78d5ef;
-  border-color: #78d5ef;
-}
+    z-index: 2;
+    color: #fff;
+    background-color: #d47373;
+    border-color: #ff5656;
+  }
 
 .list-group-flush .list-group-item {
   border-right: 0;

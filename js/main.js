@@ -101,6 +101,7 @@
        autoplay: true,
        stopOnHover: true,
        rewindNav: true,
+       lazyLoad: true,
        navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
        responsive: {
          0: {

@@ -38,7 +38,7 @@ function start_background(selector) {
   //li collection previous delays from previous slides
   var li = 0;
 
-  arr = ["images/landing.jpg", "images/worshipLanding.jpg",  "images/yaLanding.jpg", "images/sideLanding.jpg"]
+  arr = ["images/PG4-min.jpg", "images/PG58-min.jpg",  "images/PG54-min.jpg", "images/PG51-min.jpg" , "images/PG32-min.jpg"]
 
   function slider() {
     //switching all images one by one

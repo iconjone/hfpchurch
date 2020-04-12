@@ -39,6 +39,15 @@ function start_background(selector) {
   var li = 0;
 
   arr = ["images/PG4-min.jpg", "images/PG58-min.jpg",  "images/PG54-min.jpg", "images/PG51-min.jpg" , "images/PG32-min.jpg"]
+  //preload images for site performance
+  const img = new Image();
+imgArr = []
+arr.forEach((item, i) => {
+  var add = new Image();
+  add.src = item;
+  imgArr.push(add)
+});
+
 
   function slider() {
     //switching all images one by one

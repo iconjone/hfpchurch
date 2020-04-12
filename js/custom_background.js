@@ -40,9 +40,12 @@ function start_background(selector) {
 
   arr = ["images/PG4-min.jpg", "images/PG58-min.jpg",  "images/PG54-min.jpg", "images/PG51-min.jpg" , "images/PG32-min.jpg"]
   //preload images for site performance
-  const img = new Image();
+arrPreload = arr;
+arrPreload.push("images/logo/navlogowhite.png");
+arrPreload.push("images/logo/navlogoblack.png");
+arrPreload.push("images/logo/navlogo.png");
 imgArr = []
-arr.forEach((item, i) => {
+arrPreload.forEach((item, i) => {
   var add = new Image();
   add.src = item;
   imgArr.push(add)
